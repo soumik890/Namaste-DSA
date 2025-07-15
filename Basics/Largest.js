@@ -1,5 +1,5 @@
 let arr = [-23, -45, -56, -67, -89, -12, -34, -98];
-let arr2 = [10, 5, 8, 7];
+let arr2 = [10, 10, 5, 8, 7];
 
 const largestNumber = (arr) => {
   let largest = -Infinity;
@@ -21,7 +21,9 @@ const smallestNumber = (arr) => {
   return smallest;
 };
 
-const secondLargest = (arr) => {
+const secondLargest = (array) => {
+  let arr = [...new Set(array)]; //filter repeated entries
+  if (arr.length < 2) return "Array must contain two elements";
   let largest = -Infinity;
   let secondLargest = -Infinity;
   for (item of arr) {
