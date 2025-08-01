@@ -19,3 +19,10 @@ console.log(digitCounter(-259));
 //Math.round(10.5) ==> 11
 //Math.round(10.4) ==> 10
 //Math.abs(-10) ==> 10
+
+const digitCounter2 = (digit) => {
+  return Math.abs(digit).toString().length;
+};
+
+console.log(digitCounter2(-259));
+
